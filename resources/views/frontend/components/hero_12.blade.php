@@ -1,108 +1,122 @@
-@if(!empty($contents) && $contents->count() > 0)
-@php
-    $data = $contents->first();
-@endphp
 
-<section class="hero12">
-    <div class="hero12__bg-shape hero12__bg-shape--one"></div>
-    <div class="hero12__bg-shape hero12__bg-shape--two"></div>
+<section class="bannerm1" id="home">
+    <div class="bannerm1__glow bannerm1__glow--one"></div>
+    <div class="bannerm1__glow bannerm1__glow--two"></div>
 
     <div class="container">
-        <div class="row align-items-center g-5">
+        <div class="bannerm1__hero">
+            <!-- Left content -->
+            <div class="bannerm1__content">
+                <div class="bannerm1__eyebrow">
+                    <span class="bannerm1__eyebrow-line"></span>
+                    <span>EXCELLENCE BEYOND BOUNDARIES</span>
+                </div>
 
-            <!-- Content -->
-            <div class="col-lg-7">
-                <div class="hero12__content">
+                <h1 class="bannerm1__title">
+                    Work for
+                    <span>Global</span>
+                    <span class="bannerm1__title-gold">Standards.</span>
+                </h1>
 
-                    <span class="hero12__eyebrow">
-                        <span class="hero12__eyebrow-icon">
-                            <i class="{{$data->icon ?? 'bi bi-shield-check'}}"></i>
-                        </span>
-                       {{$data->title ?? ''}}
-                    </span>
+                <p class="bannerm1__description">
+                    Building a better future through innovation,
+                    quality and integrity. Mallick Group brings
+                    industries together with a vision for global
+                    excellence.
+                </p>
 
-                    <h1 class="hero12__title">
-                       {{$data->heading ?? ''}}
-                        <span>{{$data->sub_heading ?? ''}}</span>
-                        <br>
-                        
-                    </h1>
+                <div class="bannerm1__actions">
+                    <a href="#about" class="bannerm1__btn">
+                        Discover Our Group
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
 
-                    <p class="hero12__description">
-                        {{$data->short_des ?? ''}}
-                    </p>
+                    <a href="#businesses" class="bannerm1__link">
+                        Explore Our Businesses
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
 
-                    <div class="hero12__actions">
-                        @if ($data->button_url)
-                        <a href="{{$data->button_url}}" class="hero12__btn hero12__btn--primary">
-                            <span>{{$data->button_name ?? 'Explore'}}</span>
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                        @endif
-
-                        @if($data->video_url)
-                        <a href="#" class="hero12__btn hero12__btn--outline" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-url="{{$data->video_url}}">
-                            <i class="bi bi-play-circle"></i>
-                            <span>Watch Video</span>
-                        </a>
-                        @endif
-                    </div>
+                <div class="bannerm1__signature">
+                    <span class="bannerm1__signature-line"></span>
+                    <span>Driven by vision. Defined by standards.</span>
                 </div>
             </div>
 
-            <!-- Visual -->
-            <div class="col-lg-5">
-                <div class="hero12__visual">
+            <!-- Right visual -->
+            <div class="bannerm1__visual">
+                <div class="bannerm1__visual-frame">
+                    <img
+                        src="https://i.pinimg.com/1200x/f6/19/ba/f619bae0d1bc57de564193c0f7d2e799.jpg"
+                        alt="Mallick Group corporate building"
+                        class="bannerm1__main-image"
+                    >
 
-                    <div class="hero12__image-wrap">
+                    <div class="bannerm1__image-overlay"></div>
 
-                        <div class="hero12__image-glow"></div>
-
-                        <div class="hero12__image">
-                            <img
-                                src="{{asset($data->cover_image ?? 'https://i.pinimg.com/736x/3a/fa/32/3afa32a67ed7cf3891fec0eff216e1ce.jpg')}}"
-                                alt="{{$data->title ?? 'Hero Image'}}">
-                        </div>
-
-                        <div class="hero12__image-overlay"></div>
-
-                        <!-- Experience Card -->
-                        <div class="hero12__experience">
-                            <div class="hero12__experience-icon">
-                                <i class="bi bi-award"></i>
-                            </div>
-
-                            <div>
-                                <strong>{{$data->sub_title ?? ""}}</strong>
-    
-                            </div>
-                        </div>
-
-                        <!-- Justice Badge -->
-                        <div class="hero12__badge">
-                            <div class="hero12__badge-icon">
-                                <i class="bi bi-bank"></i>
-                            </div>
-
-                            <div>
-                                <strong>Justice</strong>
-                                <span>Rights • Solutions</span>
-                            </div>
-                        </div>
-
+                    <div class="bannerm1__visual-label">
+                        <span class="bannerm1__status-dot"></span>
+                        <span>BUILDING TOMORROW</span>
                     </div>
+                </div>
 
-                    <!-- Decorative Circle -->
-                    <div class="hero12__circle hero12__circle--one"></div>
-                    <div class="hero12__circle hero12__circle--two"></div>
+                <div class="bannerm1__image-card bannerm1__image-card--top">
+                    <img
+                        src="https://i.pinimg.com/736x/51/21/99/51219910f6be47498211d94a208cae6e.jpg"
+                        alt="Modern industrial operations"
+                        loading="lazy"
+                    >
+                    <div class="bannerm1__card-caption">
+                        <i class="bi bi-buildings"></i>
+                        <span>Industrial Excellence</span>
+                    </div>
+                </div>
 
+                <div class="bannerm1__image-card bannerm1__image-card--bottom">
+                    <img
+                        src="https://i.pinimg.com/736x/db/65/51/db655131b9453c7d02d365575e380e84.jpg"
+                        alt="Rice production and agricultural quality"
+                        loading="lazy"
+                    >
+                    <div class="bannerm1__card-caption">
+                        <i class="bi bi-globe2"></i>
+                        <span>Quality in Every Grain</span>
+                    </div>
+                </div>
+
+                <div class="bannerm1__orbit bannerm1__orbit--one"></div>
+                <div class="bannerm1__orbit bannerm1__orbit--two"></div>
+
+                <div class="bannerm1__monogram" aria-hidden="true">
+                    M
                 </div>
             </div>
+        </div>
 
+        <!-- Brand values -->
+        <div class="bannerm1__values">
+            <div class="bannerm1__value">
+                <i class="bi bi-globe-americas"></i>
+                <span>Global Vision</span>
+            </div>
+
+            <div class="bannerm1__value">
+                <i class="bi bi-award"></i>
+                <span>Quality First</span>
+            </div>
+
+            <div class="bannerm1__value">
+                <i class="bi bi-shield-check"></i>
+                <span>Integrity Always</span>
+            </div>
+
+            <div class="bannerm1__value">
+                <i class="bi bi-graph-up-arrow"></i>
+                <span>Sustainable Growth</span>
+            </div>
         </div>
     </div>
+
+    <div class="bannerm1__bottom-line"></div>
 </section>
-<!-- video modal -->
- @includeif('frontend/components/ui/video_modal') 
-@endif
 
