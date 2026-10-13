@@ -105,7 +105,7 @@ class NewsController extends Controller
         //---------- get authenticate use id and create a slug
         $creator_id = Auth::user()->id;
         $slug = uniqid('20').Str::random(20) . '_'.mt_rand(10000, 100000).'-'.time();
-        $url - Str::slug($request->title);
+        $url = Str::slug($request->title);
        
         // ----- insert record into database 
         $insert = News::create([
